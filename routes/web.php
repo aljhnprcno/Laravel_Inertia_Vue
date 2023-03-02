@@ -38,4 +38,8 @@ Route::middleware([
       ->names([
         'index' => 'books'
       ]);
+
+    Route::post('/upload-books', [BookController::class, 'upload']);
+    
+    Route::post('/upload-books-revert', [BookController::class, 'uploadRevert']);
 });
